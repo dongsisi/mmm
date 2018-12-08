@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" user-scalable="no">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/category.css">
+
+</head>
+<div class="mm_container">
+  <!-- 头部 -->
+  <header class="header">
+    <div class="logo">
+      <a href="#">
+        <img src="./images/header_logo.png" alt="">
+      </a>
+    </div>
+    <div class="appdown">
+      <img src="./images/header_app.png" alt="">
+    </div>
+  </header>
+  <!-- 搜索 -->
+  <div class="search">
+    <input type="text" placeholder="请输入你想比价的商品">
+    <button>搜索</button>
+  </div>
+  <!-- 分类 -->
+  <div class="category">
+    <ul class="category-title">
+      <!-- 挖坑 -->
+      <!-- <li>
+        <a href="javascript:;">大 家 电
+
+          <i class="glyphicon glyphicon-chevron-down fr"></i>
+        </a>
+        <ul class="category-content clearfix">
+          <li>
+            <a href="#">电视</a>
+          </li>
+        </ul>
+      </li> -->
+    </ul>
+  </div>
+
+  <!-- 底部 -->
+  <div class="footer">
+    <div class="footer-top">
+      <a href="javascript:;">登录</a>
+      <a href="javascript:;">注册</a>
+      <a href="javascript:;">
+        <i class=" glyphicon glyphicon-circle-arrow-down"></i>返回顶部</a>
+    </div>
+    <div class="footer-bottom">
+      <p>
+        <a class="red" href="#">手机APP下载</a>
+        <a href="#">慢慢买手机版</a>
+        -- 掌上比价平台
+      </p>
+      <p>m.manmanbuy.com</p>
+    </div>
+  </div>
+</div>
+<body>
+<script type="text/html" id="categoryTpl">
+{{each result v i}}
+<li >
+    <a  href="javascript:;" data-id="{{ v.titleId }}">{{ v.title }}
+      <i class="glyphicon glyphicon-chevron-down fr"></i>
+    </a>
+    <ul class="category-content clearfix" style="display:none;" >
+      <!-- <li>
+        <a href="#">电视</a>
+      </li> -->
+    </ul>
+  </li>
+{{/each}}
+</script>
+
+<!-- <script type="text/html" id="category2Tpl">
+{{each result v i}}
+  <li >
+    <a   href="javascript:;" data-id="{{ v.titleId }}">{{ v.title }}
+      <i class="glyphicon glyphicon-chevron-down fr"></i>
+    </a>
+    <ul class="category-content clearfix"  >
+      <li >
+        <a data-id="{{ v.categoryId }}" href="#">{{ v.category }}</a>
+      </li>
+    </ul>
+  </li>
+{{/each}}
+</script> -->
+<script type="text/html" id="category2Tpl">
+  {{each result v i}}
+        <li >
+          <a data-id="{{ v.categoryId }}" href="productList.html?categoryId={{v.categoryId}}">{{ v.category }}</a>
+        </li>
+    </li>
+  {{/each}}
+  </script>
+  <script src="./lib/jquery/jquery.min.js"></script>
+  <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
+  <script src="./lib/artTemplate/template-web.js"></script>
+  <script src="./lib/flexible/flexible.js"></script>
+  <script src="js/category.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" user-scalable="no">
+  <link rel="stylesheet" href="./fonts/css/font-awesome.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/couponproduct.css">
+</head>
+<div class="mm_container">
+  <!-- 头部 -->
+  <header class="header">
+    <div class="back">
+      <a href="index.html">
+        <i class="fa fa-chevron-left"></i>
+      </a>
+    </div>
+    <i class="download"></i>
+    <div class="title">优惠券</div>
+  </header>
+  <!-- 优惠区 -->
+  <div class="kfc">
+    <div class="notes">
+      <p>--点餐前出示手机中的优惠券，即可享受优惠--</p>
+    </div>
+    <ul class="kfc_info">
+    <!-- keng  -->
+    </ul>
+  </div>
+  <!-- 底部 -->
+  <div class="footer">
+    <div class="footer-top">
+      <a href="javascript:;">登录</a>
+      <a href="javascript:;">注册</a>
+      <a href="javascript:;">
+        <i class="fa fa-arrow-circle-o-up"></i>返回顶部</a>
+    </div>
+    <div class="footer-bottom">
+      <p>
+        <a class="red" href="#">手机APP下载</a>
+        <a href="#">慢慢买手机版</a>
+        -- 掌上比价平台
+      </p>
+      <p>m.manmanbuy.com</p>
+    </div>
+  </div>
+</div>
+<div class="mm_mask" style="display:none;">
+    <div class="pic">
+        <img src="./images/kfc.jpg" alt="">
+    </div>
+    <span class="arrow_left fa fa-angle-left"></span>
+    <span class="arrow_right fa fa-angle-right"></span>
+</div>
+<body>
+  <script type="text/html" id="tmpTpl">
+  {{each result v}}
+  <li>
+    <a href="#">
+      <div class="img fl">
+        <!-- <img src="./images/kfc1.jpg" alt=""> -->
+        {{@ v.couponProductImg }}
+      </div>
+      <div class="text">
+        <p class="texts">{{ v.couponProductName }}</p>
+        <p class="price">{{ v.couponProductPrice }} </p>
+        <p class="time">{{ v.couponProductTime }}</p>
+      </div>
+    </a>
+  </li>
+  {{/each}}  
+</script>
+  <script src="./lib/jquery/jquery.min.js"></script>
+  <script src="./lib/artTemplate/template-web.js"></script>
+  <script src="./lib/flexible/flexible.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/couproduct.js"></script>
+</body>
+
+</html>

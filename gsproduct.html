@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" user-scalable="no">
+  <link rel="stylesheet" href="./fonts/css/font-awesome.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/gsproduct.css">
+</head>
+<div class="mm_container">
+  <!-- 头部 -->
+  <header class="header">
+    <div class="back">
+      <a href="index.html">
+        <i class="fa fa-chevron-left"></i>
+      </a>
+    </div>
+    <i class="download"></i>
+    <div class="title"> 凑单品 </div>
+  </header>
+  <!-- nav区 -->
+  <div class="nav">
+    <div class="nav_right fa fa-search"></div>
+    <div class="nav_left">
+      <ul>
+        <li class="nav_on">
+          <a class="nav_top" href="javascript:;">
+            <span class="jd">京东</span>
+            <i class="fa fa-caret-down"></i>
+          </a>
+          <ul class="market1 com" style="display:none">
+            <!-- <li>
+              <a href="javascript:;">京东</a>
+              <i class="check fa fa-check"></i>
+            </li> -->
+          </ul>
+        </li>
+
+        <li class="nav_center">
+          <a class="nav_top" href="javascript:;">
+            <span class="loca"> 华北</span>
+            <i class="fa fa-caret-down"></i>
+          </a>
+          <ul class="market2 com" style="display:none">
+            <!-- <li>
+              <a href="javascript:;"> 华北</a>
+              <i class="check fa fa-check"></i>
+            </li> -->
+          </ul>
+        </li>
+        <li class="on">
+          <a class="nav_top" href="javascript:;">
+            <span class="location"> 全部 </span>
+            <i class="fa fa-caret-down"></i>
+          </a>
+          <ul class="com" style="display:none">
+            <li>
+              <a href="javascript:;">全部价格</a>
+              <i class="check fa fa-check"></i>
+          </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!-- product -->
+<div class="product_list">
+  <ul>
+    <!-- <li>
+      <div class="pic">
+        <img src="./images/wan.jpg" alt="">
+      </div>
+      <p class="txt">廿一客(21cake)专用餐具 1人份(不单独配送)</p>
+      <div class="price">
+        <span class="add-on">去凑单</span>
+        <span class="terms">¥0.50</span>
+      </div>
+    </li> -->
+  </ul>
+</div>
+  <!-- 底部 -->
+  <div class="footer">
+    <div class="footer-top">
+      <a href="javascript:;">登录</a>
+      <a href="javascript:;">注册</a>
+      <a href="javascript:;">
+        <i class="fa fa-arrow-circle-o-up"></i>返回顶部</a>
+    </div>
+    <div class="footer-bottom">
+      <p>
+        <a class="red" href="#">手机APP下载</a>
+        <a href="#">慢慢买手机版</a>
+        -- 掌上比价平台
+      </p>
+      <p>m.manmanbuy.com</p>
+    </div>
+  </div>
+</div>
+
+<body>
+  <!-- //店铺模板 -->
+  <script type="text/html" id="shopTpl">
+  {{each result v i}}
+  <li data-id="{{v.shopId}}">
+    <a href="javascript:;">{{v.shopName}}</a>
+    <i class="check fa fa-check" style="display:none"></i>
+  </li>
+  {{/each}}
+</script>
+  <script type="text/html" id="areaTpl">
+  {{each result v i}}
+      <li data-id="{{ v.areaId }}">
+         <a href="javascript:;"> {{v.areaName}}</a>
+         <i class="check fa fa-check" style="display:none"></i>
+      </li>
+{{/each}}
+</script>
+
+<script type="text/html" id="productTpl">
+{{each result v i}}
+<li>
+  <div class="pic">
+    <img src="{{v.productImg }}" alt="">
+  </div>
+  <p class="txt">{{v.productName }}</p>
+  <div class="price">
+    <span class="add-on">去凑单</span>
+    <span class="terms">{{v.productPrice}}</span>
+  </div>
+</li>
+
+{{/each}}
+</script>
+  </script>
+  <script src="./lib/jquery/jquery.min.js"></script>
+  <script src="./lib/artTemplate/template-web.js"></script>
+  <script src="./lib/flexible/flexible.js"></script>
+  <script src="js/gsproduct.js"></script>
+</body>
+
+</html>

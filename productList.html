@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" user-scalable="no">
+  <link rel="stylesheet" href="">
+  <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/productList.css">
+
+</head>
+<div class="mm_container">
+  <!-- 头部 -->
+  <header class="header">
+    <div class="logo">
+      <a href="#">
+        <img src="./images/header_logo.png" alt="">
+      </a>
+    </div>
+    <div class="appdown">
+      <img src="./images/header_app.png" alt="">
+    </div>
+  </header>
+  <!-- 搜索 -->
+  <div class="search">
+    <input type="text" placeholder="请输入你想比价的商品">
+    <button>搜索</button>
+  </div>
+  <!-- 分类 -->
+<div class="productList">
+    <div class="list_title">
+       <!-- 挖坑 -->
+    </div>
+  <div class="content">
+    <ul class="content_title">
+      <!-- 挖坑 -->
+    </ul>
+  </div>
+  <div class="page">
+    <span class="page1">
+      <a href="javascript:;">上一页</a>
+    </span>
+    <span>
+      <select name="select" id="dropDown">
+        <!-- 挖坑 -->
+        <!-- <option value="1" selected="">1 / 3</option>
+        <option value="2" selected="">2 / 3</option>
+        <option value="3" selected="">3 / 3</option> -->
+      </select>
+    </span>
+    <span class="page2">
+      <a href="javascript:;">下一页</a>
+    </span>
+  </div>
+</div>
+
+  <!-- 底部 -->
+  <div class="footer">
+    <div class="footer-top">
+      <a href="javascript:;">登录</a>
+      <a href="javascript:;">注册</a>
+      <a href="javascript:;">
+        <i class=" glyphicon glyphicon-circle-arrow-down"></i>返回顶部</a>
+    </div>
+    <div class="footer-bottom">
+      <p>
+        <a class="red" href="#">手机APP下载</a>
+        <a href="#">慢慢买手机版</a>
+        -- 掌上比价平台
+      </p>
+      <p>m.manmanbuy.com</p>
+    </div>
+  </div>
+</div>
+<body>
+  <!-- 面包屑导航模板 -->
+  <script type="text/html" id="navTpl">
+  {{each result v i}}
+    <a href="index.html">首页></a>
+    <a href="category.html">全部分类></a>
+    <a href="">{{ v.category }}</a>
+    <a href="javascript:;" class="active">筛选</a>
+  {{/each}}
+  </script>
+  <!-- 商品列表模板 -->
+<script type="text/html" id="categoryidTpl">
+{{each result v i}}
+<li class="discount-product">
+    <a data-id="{{ v.categoryid }}" href="bijia.html?categoryid={{v.categoryId}}&productid={{v.productId}}">
+      <div class="pic fl">
+        <!-- <img src="./images/list1.png" alt=""> -->
+        {{@ v.productImg }}
+      </div>
+      <div class="info">
+        <div class="info-title">
+            {{ v.productName }}
+            <p>{{ v.productPrice }}</p>
+        </div>
+        <div class="info-other">
+          <span class="mall">{{ v.productQuote }}</span>
+          <span class="num">{{ v.productCom }}</span>
+        </div>
+      </div>
+    </a>
+  </li>
+{{/each}}
+</script>
+<!-- 分页模板 -->
+<script type="text/html" id="pageTpl">
+  <% for(var i = 1; i <= pages; i++) {%>
+    <option value="{{i}}" {{ i== pageid ? 'selected="selected"' : ''}}> <%= i %> / <%= pages %></option>
+    <% } %>
+</script>
+
+  <script src="./lib/jquery/jquery.min.js"></script>
+  <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
+  <script src="./lib/artTemplate/template-web.js"></script>
+  <script src="./lib/flexible/flexible.js"></script>
+ 
+  <script src="js/productList.js"></script>
+</body>
+
+</html>

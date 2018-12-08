@@ -1,0 +1,484 @@
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-size: 14px;
+  font-family: 'Microsoft YaHei', sans-serif;
+  background-color: #f5f5f5;
+}
+a {
+  color: #333;
+  text-decoration: none;
+}
+ul,
+ol {
+  list-style: none;
+}
+input[type="text"],
+input[type="search"],
+textarea {
+  border: none;
+  outline: none;
+  resize: none;
+  -webkit-appearance: none;
+}
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.clearfix::before,
+.clearfix::after {
+  content: "";
+  display: block;
+  visibility: hidden;
+  height: 0;
+  line-height: 0;
+  clear: both;
+}
+img {
+  display: block;
+  width: 100%;
+}
+/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  margin: 0;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  vertical-align: baseline;
+}
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+[hidden],
+template {
+  display: none;
+}
+a {
+  background-color: transparent;
+}
+a:active,
+a:hover {
+  outline: 0;
+}
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+b,
+strong {
+  font-weight: bold;
+}
+dfn {
+  font-style: italic;
+}
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+mark {
+  background: #ff0;
+  color: #000;
+}
+small {
+  font-size: 80%;
+}
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+img {
+  border: 0;
+}
+svg:not(:root) {
+  overflow: hidden;
+}
+figure {
+  margin: 1em 40px;
+}
+hr {
+  box-sizing: content-box;
+  height: 0;
+}
+pre {
+  overflow: auto;
+}
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+button {
+  overflow: visible;
+}
+button,
+select {
+  text-transform: none;
+}
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+input {
+  line-height: normal;
+}
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+input[type="search"] {
+  -webkit-appearance: textfield;
+  box-sizing: content-box;
+}
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+legend {
+  border: 0;
+  padding: 0;
+}
+textarea {
+  overflow: auto;
+}
+optgroup {
+  font-weight: bold;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+td,
+th {
+  padding: 0;
+}
+.header {
+  line-height: 1.32rem;
+  width: 100%;
+  height: 1.32rem;
+  background-color: #FF841D;
+  position: relative;
+  border-bottom: 1px solid #ccc;
+}
+.header .logo {
+  width: 75%;
+  float: left;
+  padding: .33rem;
+}
+.header .logo img {
+  display: block;
+  width: 4.95rem;
+  height: .67rem;
+}
+.header .appdown {
+  float: right;
+  padding: .2rem;
+}
+.header .appdown img {
+  width: .91rem;
+  height: .91rem;
+  display: block;
+}
+.search {
+  width: 100%;
+  height: 1.33rem;
+  overflow: hidden;
+  background-color: #fff;
+  padding: .27rem;
+}
+.search button {
+  float: right;
+  height: .8rem;
+  border: none;
+  background-color: #FF841D;
+  border-radius: .4rem;
+  font-size: .34rem;
+  width: 18%;
+  color: #fff;
+}
+.search input {
+  height: .8rem;
+  float: left;
+  border-radius: 50%;
+  width: 80%;
+  font-size: .24rem;
+  background-color: #f1f1f1;
+  border-radius: .4rem;
+  text-indent: .03rem;
+  padding-left: .24rem;
+}
+.list_title {
+  height: 1rem;
+  line-height: .9rem;
+  width: 100%;
+  border-top: 1px solid #c4c4c4;
+  border-bottom: 1px solid #c4c4c4;
+  background-image: linear-gradient(#ffffff, #cccccc);
+  padding: 0 .13rem;
+}
+.list_title a {
+  font-size: .32rem;
+}
+a {
+  text-decoration: none!important;
+  color: #333;
+}
+.bijia {
+  width: 100%;
+  height: 7.73rem;
+}
+.bijia .list_title {
+  width: 100%;
+  height: 1rem;
+  border-top: 1px solid #c4c4c4;
+  border-bottom: 1px solid #c4c4c4;
+  background-image: linear-gradient(#ffffff, #cccccc);
+  overflow: hidden;
+  padding: 0 .13rem;
+}
+.bijia .list_title a {
+  height: 1rem;
+  font-size: .36rem;
+  line-height: .97rem;
+}
+.bijia .list_title .active {
+  display: block;
+  width: 1.67rem;
+  height: .8rem;
+  float: right;
+  text-align: center;
+  margin-top: .11rem;
+  background: #d0d0d0;
+  border-radius: .13rem;
+  background-image: linear-gradient(#d7d7d7, #f5f5f5);
+  line-height: .8rem;
+}
+.bijia .content {
+  width: 100%;
+  height: 6.77rem;
+  box-sizing: border-box;
+  background-color: #fff;
+  position: relative;
+}
+.bijia .content .productName {
+  font-size: .48rem;
+  text-align: center;
+  height: 2rem;
+  padding: .53rem .67rem 0;
+}
+.bijia .content .productPic {
+  width: 100%;
+}
+.bijia .content .productPic img {
+  width: 4.27rem;
+  height: 4.27rem;
+  margin: 0 auto;
+}
+.bijia .content .collet {
+  position: absolute;
+  bottom: .27rem;
+  right: .67rem;
+  color: #fff;
+  width: 1.13rem;
+  height: 1.13rem;
+  border-radius: 50%;
+  background-color: #91d701;
+  border: 1px solid #c4c4c4;
+  text-align: center;
+  line-height: 1.1rem;
+}
+.tab {
+  width: 100%;
+  margin-top: .13rem;
+  background-color: #fff;
+}
+.tab ul {
+  border-top: 1px solid #b32b00;
+  border-bottom: 1px solid #b32b00;
+  height: .93rem;
+  width: 100%;
+  overflow: hidden;
+}
+.tab li {
+  float: left;
+  width: 33.3%;
+  font-size: .37rem;
+  text-align: center;
+  line-height: .93rem;
+  color: #fff;
+}
+.tab .current {
+  background-color: #ff9b19;
+}
+.tab .one {
+  border-left: 1px solid #b32b00;
+  border-right: 1px solid #b32b00;
+}
+.tab .one,
+.tab .two {
+  background-color: #ffc833;
+}
+.price {
+  width: 100%;
+  background-color: #fff;
+}
+.price .prices {
+  width: 100%;
+  height: 1.13rem;
+  border-bottom: .01rem solid #c4c4c4;
+  font-size: .32rem;
+  line-height: 1.07rem;
+}
+.price .prices a {
+  color: #333;
+  text-decoration: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.price .prices table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.price .prices table .p_pic {
+  width: .93rem;
+  height: 100%;
+}
+.price .prices table img {
+  width: .47rem;
+  margin-top: .33rem;
+  margin-left: .27rem;
+}
+.price .prices .red {
+  width: 2rem;
+  height: 100%;
+  color: #cd0117;
+}
+.price .prices span {
+  width: 1.6rem!important;
+  height: .67rem!important;
+  display: inline-block;
+  width: 56px;
+  height: 24px;
+  border-radius: 6px;
+  text-align: center;
+  line-height: .6rem!important;
+  background-color: #ff5500;
+  color: #fff;
+  font-size: .32rem!important;
+  margin-right: .13rem!important;
+}
+.price .notes {
+  width: 100%;
+  height: 1.47rem;
+  padding: .27rem .2rem;
+  font-size: .32rem;
+  color: #808385;
+}
+.comment {
+  width: 100%;
+  background-color: #fff;
+}
+.comment .comment_title {
+  width: 100%;
+  height: .93rem;
+  background-color: #dbdbdb;
+  border-top: .03rem solid #606060;
+  font-size: .32rem;
+  text-align: center;
+  line-height: .91rem;
+}
+.comment li {
+  border-bottom: 1px solid #c4c4c4;
+  padding: .2rem .2rem .07rem;
+  font-size: .19rem;
+}
+.more {
+  width: 100%;
+  height: 1.67rem;
+  background-color: #fff;
+  padding-top: .27rem;
+}
+.more .more-bar {
+  text-align: center;
+  padding: .13rem .13rem 0 .13rem;
+  width: 100%;
+}
+.more .more-bar a {
+  display: block;
+  border-radius: .13rem;
+  border: .03rem solid #b4b4b4;
+  height: .8rem;
+  font-size: .32rem;
+  line-height: .75rem;
+  background-image: linear-gradient(#f1f1f1, #d4d4d4);
+}

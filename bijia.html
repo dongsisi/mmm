@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" user-scalable="no">
+  <link rel="stylesheet" href="">
+  <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/bijia.css">
+
+</head>
+<div class="mm_container">
+  <!-- 头部 -->
+  <header class="header">
+    <div class="logo">
+      <a href="#">
+        <img src="./images/header_logo.png" alt="">
+      </a>
+    </div>
+    <div class="appdown">
+      <img src="./images/header_app.png" alt="">
+    </div>
+  </header>
+  <!-- 搜索 -->
+  <div class="search">
+    <input type="text" placeholder="请输入你想比价的商品">
+    <button>搜索</button>
+  </div>
+  <!-- 比价 -->
+  <div class="bijia">
+      <div class="list_title">
+          <a href="index.html">首页></a>
+          <span class="cate">
+              <!-- <a href="category.html">全部分类></a> -->
+          </span>
+          <span class="twocate"> 
+            <!-- <a href=""></a> -->
+          </span>
+          <a href="javascript:;" class="active">筛选</a>
+      </div>
+    <div class="content">
+      <!-- 挖坑 -->
+      
+  </div>
+  <!-- 比价购买底部 -->
+  <div class="tab">
+    <ul>
+      <li class="current">
+        <a href="#">比价购买</a>
+      </li>
+      <li class="one">
+        <a  href="#">产品参数</a>
+      </li>
+      <li class="two">
+        <a href="#">评价</a>
+      </li>
+    </ul>
+  </div>
+  <!-- 价钱 -->
+   <div class="price"> 
+    <div class="prices">
+        <table width="100%">
+            <tbody>
+              <tr>
+                <td rowspan="2" class="p_pic" valign="top">
+                    <a href="#"><img src="./images/1.png" alt=""></a>
+                </td>
+               <td>
+                 <a href="#">京东商城</a>
+               </td>
+               <td class="red">                        ￥1999.00                    </td>
+               <td align="center" width="60"><span>去购买</span></td>
+              </tr>
+
+              <tr class="r">
+                <td>                    </td>
+                <td class="r">                    </td>
+                <td></td>
+              </tr>
+            </tbody>
+           </table>
+    </div>
+    <div class="notes">
+        * 实际价格以各网站列出的实时售价为准，我们提供的价格可能有数小时至数日的延迟。
+
+    </div>
+  </div> 
+  <!-- 评价 -->
+  <div class="comment">
+    <div class="comment_title">
+      网友评价
+    </div>
+    <div class="comment_content">
+      <ul class="com">
+          <!-- <li>
+              <div class="clearfix">
+                <span class="com-name fl">b***r</span>
+                <span class="com-time fr">2016/10/1</span>
+              </div>
+              <div class="clearfix">
+                <span class="fr">购买自：京东商城</span>
+              </div>
+              <div class="com-content">
+                  使用了一周整体不错，主要是为了看纪录片和足球。装在窗户上有种大鱼缸的感觉哈！清晰度不错色彩也可以.
+              </div>
+            </li> -->
+      </ul>
+    </div>
+  </div>
+  <!-- 更多 -->
+  <div class="more">
+   <div class="more-bar">
+     <a href="#">查看更多评价</a>
+   </div>
+  </div>
+  <!-- 底部 -->
+  <div class="footer">
+    <div class="footer-top">
+      <a href="javascript:;">登录</a>
+      <a href="javascript:;">注册</a>
+      <a href="javascript:;">
+        <i class=" glyphicon glyphicon-circle-arrow-down"></i>返回顶部</a>
+    </div>
+    <div class="footer-bottom">
+      <p>
+        <a class="red" href="#">手机APP下载</a>
+        <a href="#">慢慢买手机版</a>
+        -- 掌上比价平台
+      </p>
+      <p>m.manmanbuy.com</p>
+    </div>
+  </div>
+</div>
+
+<body>
+
+
+<!-- 渲染二级菜单 -->
+<script type="text/html" id="one">
+{{ each result v }}
+  <a href="productlist.html?categoryid={{v.categoryId}}&value={{v.category}}">{{v.category}}></a>
+   {{ /each }}
+  </script>
+
+<!-- 渲染三级菜单 -->
+<script type="text/html" id="two">
+{{each list v }}
+  <a href="">{{ v }}</a>
+  {{/each}}
+</script>
+
+ <!-- 渲染商品信息 -->
+<script type="text/html" id="productTpl">
+{{each result v }}
+  <div class="productName">
+     {{ v.productName }}
+    </div>
+    <div class="productPic">
+      <!-- <img src="./images/list1.png" alt=""> -->
+      {{@ v.productImg }}
+    </div> 
+  <div class="collet">收藏</div> 
+  </div>
+{{/each}}
+</script>
+<!-- 价格模板 -->
+<script type="text/template" id="price_tmp">
+  {{@result[0].bjShop}}
+</script>
+
+<!-- 评论模板 -->
+<script type="text/html" id="comment">
+{{each result v}}
+  <li>
+    <div class="clearfix">
+      <span class="com-name fl">{{ v.comName }}</span>
+      <span class="com-time fr">{{ v.comTime }}</span>
+    </div>
+    <div class="clearfix">
+      <span class="fr">{{ v.comFrom }}</span>
+    </div>
+    <div class="com-content">
+       {{v.comContent }}
+    </div>
+  </li>
+{{/each}}
+</script>
+  <script src="./lib/jquery/jquery.min.js"></script>
+  <script src="./lib/artTemplate/template-web.js"></script>
+  <script src="./lib/flexible/flexible.js"></script>
+  <script src="js/bijia.js"></script>
+</body>
+
+</html>

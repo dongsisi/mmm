@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" user-scalable="no">
+  <link rel="stylesheet" href="fonts/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/brand.css">
+
+</head>
+<div class="mm_container">
+  <!-- 头部 -->
+  <header class="header">
+    <div class="logo">
+      <a href="#">
+        <img src="./images/header_logo.png" alt="">
+      </a>
+    </div>
+    <div class="appdown">
+      <img src="./images/header_app.png" alt="">
+    </div>
+  </header>
+  <!-- 搜索 -->
+  <div class="search">
+    <input type="text" placeholder="请输入你想比价的商品">
+    <button>搜索</button>
+  </div>
+  <!-- 导航 -->
+ <div class="list_title">
+   <a href="index.html">首页></a>
+   <a href="category.html">全部分类></a>
+ </div>
+
+ <!-- 热门品牌 -->
+ <div class="brand">
+   <p><span class="re_top">平板电视</span>哪个牌子好</p>
+ </div>
+ <!-- 类别品牌 -->
+ <div class="sign">
+   <ul>
+     <!-- <li>
+       <a href="#">
+         <span class="number">1</span>
+         <span class="icon fa fa-angle-right "></span>
+         <div class="info">
+          <div class="txt">三星平板电视</div>
+          <p>30天全网销售：242408件</p>
+         </div>
+       </a>
+     </li> -->
+   </ul>
+ </div>
+
+ <!-- 销量 -->
+ <div class="brand">
+   <a href="javascript:;">
+      <p><span class="re_top">平板电视</span>产品销量排行</p>
+   </a>
+  </div>
+ <!-- 产品销量排行 -->
+ <div class="list_content">
+   <ul>
+     <!-- <li class="discount_product">
+       <a href="#">
+         <div class="pic fl">
+           <img src="./images/dian.jpg" alt="">
+         </div>
+         <div class="info">
+           <div class="info_title">
+             <div> 乐视TV(Letv) 超3 X55 55英寸智能LED液晶 超级电视 4K超清电视</div>
+             <p>￥3266.00</p>
+           </div>
+           <div class="info_other">
+             <span class="mall">报价(6)</span>
+             <span class="num">评论(3522)</span>
+             <div class="star">
+               <span class="fa fa-star"></span>
+               <span class="fa fa-star"></span>
+               <span class="fa fa-star"></span>
+             </div>
+           </div>
+         </div>
+       </a>
+     </li> -->
+   </ul>
+ </div>
+<!-- 评论板块 -->
+ <div class="brand">
+    <a href="javascript:;">
+       <p><span class="re_top">平板电视</span>最新评论</p>
+    </a>
+   </div>
+<!-- 最新评论 -->
+<div class="comment">
+  <ul>
+   <!-- <ul>
+     <li class="message">
+       <div class="pro_info">
+         <div class="pic fl">
+           <img src="./images/dian.jpg" alt="">
+         </div>
+         <p class="text"> 乐视TV(Letv) 超3 X55 55英寸智能LED液晶 超级电视 4K超清电视</p>
+       </div>
+       <div class="com_info">
+         <div class="per_info">
+           <span class="name">g***n</span>
+           <div class="star">
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
+           </div>
+           <span class="time">2016/2/18</span>
+         </div>
+         <div class="con">
+            外观：精工细作，颜值再度提高作为一台55寸的大电视，乐视X55正面看起来非常大气，配合Letv独有的造型独特的云底座，整体视觉观感出色。会发光的Letv标识被放置在了机器的左下角，标识右侧，安排有一个圆     
+         </div>
+       </div>
+     </li>
+   </ul> -->
+  </ul>
+</div>
+  <!-- 底部 -->
+  <div class="footer">
+    <div class="footer-top">
+      <a href="javascript:;">登录</a>
+      <a href="javascript:;">注册</a>
+      <a href="javascript:;">
+        <i class=" glyphicon glyphicon-circle-arrow-down"></i>返回顶部</a>
+    </div>
+    <div class="footer-bottom">
+      <p>
+        <a class="red" href="#">手机APP下载</a>
+        <a href="#">慢慢买手机版</a>
+        -- 掌上比价平台
+      </p>
+      <p>m.manmanbuy.com</p>
+    </div>
+  </div>
+</div>
+<body>
+<script type="text/html" id="brandtitleTpl">
+  {{each result v i}}
+  <li>
+      <a href="productlist.html?categoryId={{v.categoryId}}&pageid=1">
+        <span class="number" data-index="{{i}}">{{i+1}}</span>
+        <span class="icon fa fa-angle-right "></span>
+        <div class="info">
+         <div class="txt">{{ v.brandName }}</div>
+         <p>{{ v.brandInfo }}</p>
+        </div>
+      </a>
+    </li>
+  {{/each}}
+</script>
+<script type="text/html" id="tempTpl">
+{{each result v i}}
+<li class="discount_product">
+    <a href="bijia.html?productid={{v.productId}}">
+      <div class="pic fl">
+        <!-- <img src="./images/dian.jpg" alt=""> -->
+        {{@ v.productImg}}
+      </div>
+      <div class="info">
+        <div class="info_title">
+          <div> {{v.productName }}</div>
+          <p>{{v.productPrice }}</p>
+        </div>
+        <div class="info_other">
+          <span class="mall">{{v.productQuote}}</span>
+          <span class="num">{{v.productCom}}</span>
+          <div class="star">
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
+          </div>
+        </div>
+      </div>
+    </a>
+  </li>
+{{/each}}
+</script>
+  
+<script type="text/html" id="commentTpl">
+{{each result v i}}
+<ul>
+    <li class="message">
+      <div class="pro_info">
+        <div class="pic fl">
+          <img src="./images/dian.jpg" alt="">
+        </div>
+        <p class="text"> {{v.text}}</p>
+      </div>
+      <div class="com_info">
+        <div class="per_info">
+          <span class="name">{{v.comName}}</span>
+          <div class="star">
+           <span class="fa fa-star"></span>
+           <span class="fa fa-star"></span>
+          </div>
+          <span class="time">{{v.comTime}}</span>
+        </div>
+        <div class="con">
+          {{v.comContent}}   
+        </div>
+      </div>
+    </li>
+  </ul>
+{{/each}}
+</script>
+    
+   <script src="./lib/jquery/jquery.min.js"></script>
+   <script src="./lib/artTemplate/template-web.js"></script>
+   <script src="./lib/flexible/flexible.js"></script>
+   <script src="js/common.js"></script>
+   <script src="js/brand.js"></script>
+</body>
+
+</html> 

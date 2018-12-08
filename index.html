@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" user-scalable="no">
+  <link rel="stylesheet" href="">
+  <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/index.css">
+
+</head>
+<div class="mm_container">
+  <!-- 头部 -->
+  <header class="header">
+    <div class="logo">
+      <a href="#">
+        <img src="./images/header_logo.png" alt="">
+      </a>
+    </div>
+    <div class="appdown">
+      <img src="./images/header_app.png" alt="">
+    </div>
+  </header>
+  <!-- 搜索 -->
+  <div class="search">
+    <input type="text" placeholder="请输入你想比价的商品">
+    <button>搜索</button>
+  </div>
+  <!-- 导航 -->
+  <div class="nav">
+    <ul class="row">
+      <!-- 挖坑 -->
+    </ul>
+  </div>
+  <!-- 公共部分 -->
+  <div class="common">
+    <span>超值折扣推荐</span>
+    <img src="./images/more.png" alt="">
+  </div>
+  <!-- 折扣 -->
+  <div class="discount">
+    <ul class="row2">
+      <!-- 挖坑 -->
+    
+    </ul>
+    <div class="more-bar">
+      <a href="#">更多优惠信息>> </a>
+    </div>
+  </div>
+  <!-- 公共部分 -->
+  <div class="common">
+    <span>品牌排行</span>
+    <img src="./images/more.png" alt="">
+  </div>
+  <!-- 底部 -->
+  <div class="footer">
+    <div class="footer-top">
+      <a href="javascript:;">登录</a>
+      <a href="javascript:;">注册</a>
+      <a href="javascript:;">
+        <i class=" glyphicon glyphicon-circle-arrow-down"></i>返回顶部</a>
+    </div>
+    <div class="footer-bottom">
+      <p>
+        <a class="red" href="#">手机APP下载</a>
+        <a href="#">慢慢买手机版</a>
+        -- 掌上比价平台
+      </p>
+      <p>m.manmanbuy.com</p>
+    </div>
+  </div>
+</div>
+
+ 
+ 
+<body>
+    <script type="text/html" id="navTpl">
+     {{each result v i}}
+    <li data-id="{{ v.indexmenuId }}" style="display:{{ i> 7?'none':'block'}}"  data-type="{{ i>=8 ?'1':''}}">
+      <a  href="{{ v.titlehref }}">
+        {{@ v.img}}
+        <p>{{ v.name }}</p>
+      </a>
+    </li>
+  {{/each}}
+     </script>
+
+     <script type="text/html" id="discountTpl">
+    {{each result v i}}
+    <li>
+        <a  data-id="productId" href="#">
+          <div class="pic fl">
+           {{@ v.productImgSm }}
+          </div>
+          <div class="info">
+            <div class="title">
+             {{ v.productName }}
+              <span>{{ v.productPinkage }}</span>
+            </div>
+            <div class="other">
+              <span>{{ v.productFrom }} | {{ v.productTime }}</span>
+              <span class="fr">{{ v.productComCount }}</span>
+            </div>
+          </div>
+        </a>
+      </li>
+    {{/each}}
+    </script>
+    
+   <script src="./lib/jquery/jquery.min.js"></script>
+   <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
+   <script src="./lib/artTemplate/template-web.js"></script>
+   <script src="./lib/flexible/flexible.js"></script>
+   <script src="js/index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" user-scalable="no">
+  <link rel="stylesheet" href="">
+  <link rel="stylesheet" href="./fonts/css/font-awesome.css">
+  <link rel="stylesheet" href="css/moneyproduct.css">
+</head>
+<div class="mm_container">
+  <!-- 头部 -->
+  <header class="header">
+    <div class="back">
+      <a href="index.html">
+        <i class="fa fa-chevron-left"></i>
+      </a>
+    </div>
+    <i class="download"></i>
+    <div class="title">国内折扣</div>
+  </header>
+ 
+  <!-- 主要内容 -->
+  <div class="main">
+    <div class="main_content">
+      <!-- <div class="main_title">
+        <h3>移动端凑单品：海天 鲜味 生抽 1.28L</h3>
+        <div class="info">
+          <span class="mall">京东商城</span>
+          <span class="time">10-25 14:10</span>
+          <span class="author">小编烟火 / 慢慢买</span>
+
+        </div>
+        <div class="data_info">
+          <div class="text">
+            <img src="./images/1.jpg" alt="">海天的金标生抽酱油，采用了非转基因大豆以及小麦发酵而成，而自然鲜的口感是有些鲜甜鲜甜的感觉，非常适合用来作为日常炒菜用的调味料，当然也能用作白切系列的蘸酱调料，相信吃过美味鲜的慢友们都了解的。     
+          </div>
+          <p>目前京东商城移动端售价10.9元，不错的凑单品，刚需可入，规格1.28L。</p>
+        </div>
+        <div class="big_img">
+          <img src="./images/1.jpg" alt="">
+        </div>
+      </div>
+      <div class="main_url">
+        <ul>
+          <li>
+            <a href="#">
+              <span>北京<strong>有货</strong></span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="main_buy">
+        <a href="#">前往购买</a>
+      </div>
+      <div class="main_app">
+        <img src="./images/mmbweixin2.png" alt="">
+      </div>
+      <div class="main_product">
+        <div class="cu-content-pl">
+          <div class="tit">发表评论</div>
+          <div class="reply">
+            <div class="form" >
+              <textarea name="" id=""  rows="3"></textarea>
+              <div class="ctrl">
+                <input type="submit" value="发表评论">
+              </div>
+            </div>
+          </div>
+          <div class="tit" id="newcomment">最新评论</div>
+          <div class="user">
+            <ul>
+              <li class="ui-border-b">
+                <div class="usering">
+                  <img src="./images/user.jpg" alt="">
+                </div>
+                <div class="con">
+                  <div class="name clearfix">
+                    <div class="username">赶鸭子上架</div>
+                    <div class="time">2016/10/25 14:18:45</div>
+                    <div class="content">比超市便宜了几块</div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div> -->
+    </div>
+  </div>
+  
+
+  <!-- 底部 -->
+  <div class="footer">
+    <div class="footer-top">
+      <a href="javascript:;">登录</a>
+      <a href="javascript:;">注册</a>
+      <a href="javascript:;">
+        <i class="fa fa-arrow-circle-o-up"></i>返回顶部</a>
+    </div>
+    <div class="footer-bottom">
+      <p>
+        <a class="red" href="#">手机APP下载</a>
+        <a href="#">慢慢买手机版</a>
+        -- 掌上比价平台
+      </p>
+      <p>m.manmanbuy.com</p>
+    </div>
+  </div>
+
+</div>
+<body>
+  <script type="text/html" id="moneyTpl">
+  {{each result v i}}
+  <div class="main_title">
+      <h3>{{v.productName}}</h3>
+      <div class="info">
+        <span class="mall">{{v.productFrom}}</span>
+        <span class="time">{{v.productTime}}</span>
+        <span class="author">{{v.productTips}}</span>
+
+      </div>
+      <div class="data_info">
+        <div class="text">
+          <!-- <img src="./images/1.jpg" alt="">{{v.productInfo}}     -->
+          {{@ v.productImgSm}} {{v.productInfo}}
+        </div>
+        <p>{{v.productInfo1}}</p>
+      </div>
+      <div class="big_img">
+        <!-- <img src="./images/1.jpg" alt=""> -->
+        {{@ v.productImgLg}}
+      </div>
+    </div>
+    <div class="main_url">
+      <!-- <ul>
+        <li>
+          <a href="#">
+            <span>北京<strong>有货</strong></span>
+          </a>
+        </li>
+      </ul> -->
+      {{@ v.productCity}}
+    </div>
+    <div class="main_buy">
+      <a href="#">前往购买</a>
+    </div>
+    <div class="main_app">
+      <img src="./images/mmbweixin2.png" alt="">
+    </div>
+    <div class="main_product">
+      {{@ v.productComment }}
+    </div>
+  {{/each}}
+  
+  </script>
+  <script src="./lib/jquery/jquery.min.js"></script>
+  <script src="./lib/artTemplate/template-web.js"></script>
+  <script src="./lib/flexible/flexible.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/moneyproduct.js"></script>
+</body>
+
+</html>

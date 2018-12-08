@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" user-scalable="no">
+  <link rel="stylesheet" href="">
+  <link rel="stylesheet" href="./fonts/css/font-awesome.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/discount.css">
+</head>
+<div class="mm_container">
+  <!-- 头部 -->
+  <header class="header">
+    <div class="back">
+      <a href="index.html">
+        <i class="fa fa-chevron-left"></i>
+      </a>
+    </div>
+    <i class="download"></i>
+    <div class="title">国内折扣</div>
+  </header>
+  <!-- details主要内容  -->
+  <div class="mm_details">
+      <div class="dts_content">
+          <div class="cont_title">
+              <h3 class="title">移动端凑单品：海天 鲜味 生抽 1.28L</h3>
+              <div class="info">
+                  <span class="mall">京东商城</span>
+                  <span class="add-time">10-25 14:10</span>
+                  <span class="author">小编烟火 / 慢慢买</span>
+              </div>
+              <div class="deta_info ">
+                  <div calss="text clearfix">
+                      <img src="./images/hua.jpg" alt="">海天的金标生抽酱油， 采用了非转基因大豆以及小麦发酵而成，而自然鲜的口感是有些鲜甜鲜甜的感觉， 非常适合用来作为日常炒菜用的调味料，当然也能用作白切系列的蘸酱调料， 相信吃过美味鲜的慢友们都了解的。
+                  </div>
+                  <p>目前京东商城移动端售价10.9元，不错的凑单品，刚需可入，规格1.28L。</p>
+              </div>
+              <div class="big_img"></div>
+          </div>
+
+          <!-- <div class="data_ul">
+   
+          </div> -->
+          <div class="data_buy">
+              <a href="#">前往购买</a>
+          </div>
+          <div class="app_img">
+              <img src="./images/mmbweixin2.png" alt="">
+          </div>
+          <div class="data_publish">
+              <!-- <div class="publish">
+                  <div class="txt">发表评论</div>
+                  <div class="from">
+                      <input type="text">
+                  </div>
+              </div> -->
+
+
+          </div>
+      </div>
+  </div>
+  <!-- 底部 -->
+  <div class="footer">
+    <div class="footer-top">
+      <a href="javascript:;">登录</a>
+      <a href="javascript:;">注册</a>
+      <a href="javascript:;">
+        <i class="fa fa-arrow-circle-o-up"></i>返回顶部</a>
+    </div>
+    <div class="footer-bottom">
+      <p>
+        <a class="red" href="#">手机APP下载</a>
+        <a href="#">慢慢买手机版</a>
+        -- 掌上比价平台
+      </p>
+      <p>m.manmanbuy.com</p>
+    </div>
+  </div>
+</div>
+
+<body>
+    <script type="text/html" id="dis_tmp">
+      <div class="dts_content">
+              <div class="cont_title">
+                  <h3 class="title">{{ result[0].productName }}</h3>
+                  <div class="info">
+                      <span class="mall">{{ result[0].productFrom }}</span>
+                      <span class="add-time">1{{ result[0].productTime }}</span>
+                      <span class="author">{{ result[0].productTips }}</span>
+                  </div>
+                  <div class="deta_info ">
+                      <div calss="text clearfix">
+                          <img src="./images/hua.jpg" alt="">{{ result[0].productInfo }}
+                      </div>
+                      <!-- <p>目前京东商城移动端售价10.9元，不错的凑单品，刚需可入，规格1.28L。</p> -->
+                  </div>
+                  <div class="big_img">
+                      {{@ result[0].productImg }}
+                  </div>
+              </div>
+
+              <!-- <div class="data_ul">
+       
+              </div> -->
+              <div class="data_buy">
+                  <a href="#">前往购买</a>
+              </div>
+              <div class="app_img">
+                  <img src="./images/mmbweixin2.png" alt="">
+              </div>
+              <div class="data_publish">
+                  <!-- <div class="publish">
+                      <div class="txt">发表评论</div>
+                      <div class="from">
+                          <input type="text">
+                      </div>
+                  </div> -->
+                  {{@result[0].productComment}}
+
+              </div>
+          </div>
+  </script>
+  <script src="./lib/jquery/jquery.min.js"></script>
+  <script src="./lib/artTemplate/template-web.js"></script>
+  <script src="./lib/flexible/flexible.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/discount.js"></script>
+</body>
+
+</html>

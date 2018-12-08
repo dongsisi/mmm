@@ -1,0 +1,82 @@
+@import './base.less';
+@import './normalize.less';
+@import './variable.less';
+
+.kfc{
+  width:100%;
+  background-color: #fff;
+  .notes{
+    width:100%;
+    height: .93rem;
+    line-height: .93rem;
+    p{
+      font-size: .24rem;
+      color:#a19898;
+      text-align:center;
+    }
+  }
+  
+  .kfc_info{
+    width:100%;
+    overflow: hidden;
+    li{
+      width:100%;
+      height: 3.64rem;
+      // background-color: pink;
+      padding: .27rem .27rem;
+      border-bottom:.03rem solid #eaeaea;
+      img{
+        width: 2.67rem;
+        height: 2.2rem;
+      }
+      .text{
+        position: relative;
+        height:100%;
+        // background-color: lightblue;
+        overflow: hidden;
+        padding-left: .27rem;
+        .texts{
+          font-size: .32rem;
+        }
+        .price{
+          font-size: .35rem;
+          font-weight: 700;
+          margin-top: .4rem;
+        }
+        .time{
+          font-size: .32rem;
+          color:#ec740e;
+          margin-top: .4rem;
+        }
+      }
+    }
+    
+  }
+}
+.mm_mask{
+  width:100%;
+  height:100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  position:fixed;
+  top:0;
+  left:0;
+  .pic{
+    width:2.67rem;
+    height:2.67rem;
+    margin:2.67rem auto;
+  }
+  .arrow_left{
+    margin-left:-4rem;
+  }
+  .arrow_right{
+    margin-left: 4rem;
+  }
+  span{
+    font-size:1.07rem;
+    position: absolute;
+    top:3.2rem;
+    left:50%;
+    transform:trnaslateX(-50%);
+    color:#fff;
+  }
+}

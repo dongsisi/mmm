@@ -1,0 +1,220 @@
+@import './base.less';
+@import './normalize.less';
+@import './variable.less';
+
+.header{
+  line-height:1.32rem;
+  width:100%;
+  height: 1.32rem;
+  background-color: #f4483e;
+  border-bottom:1px soid #ccc;
+  .back{
+    font-size:.53rem;
+    float:left;
+    margin-left:.4rem;
+    a{
+      color:#fff;
+     i{
+       color:#fff;
+     }
+    }
+  }
+  .download{
+    width:.91rem;
+    height:.91rem;
+    background:url("../images/header_app.png");
+    background-size: .91rem .91rem;
+    position: absolute;
+    top:.28rem;
+    right:.38rem;
+  }
+  .title{
+    text-align:center;
+    font-size:.6rem;
+    color:#fff;
+    margin-right:1.07rem;
+    font-weight: bold;
+  }
+}
+.footer{
+  background-color: #F5F5F5;
+  width:100%;
+  height: 3.24rem;
+  margin-top: .67rem;
+  .footer-top{
+    height: .85rem;
+    border-top:.03rem solid #c4c4c4;
+    border-bottom:.03rem solid #c4c4c4;
+    a{
+      color:#333;
+      text-decoration: none;
+      width:33.333%;
+      float:left;
+      display: block;
+      text-align:center;
+      height:.85rem;
+      line-height:.85rem;
+      font-size:.37rem;
+      border-right:.03rem solid #c4c4c4
+    }
+  }
+ 
+  .footer-bottom{
+    margin-top: .4rem;
+    text-align:center;
+   p{
+    font-size:.32rem;
+    a{
+      text-decoration: none;
+      color:#333;
+    }
+   }
+  }
+  .red{
+    color:red!important;
+  }
+  
+}
+.bargin{
+  width:100%;
+  background-color:#c4c4c4;
+  .bargin_nav{
+    background-color: #fff;
+    .nav_right{
+      float:right;
+      width: 1.07rem;
+      height:1.07rem;
+      background-color: #f4f4f4;
+      font-size: .8rem;
+      padding-left: .15rem;
+      padding-top: .13rem;
+    }
+    .nav_left{
+      padding-left: .13rem;
+      height: 1.07rem;
+      border-right: 1px solid #c4c4c4;
+      width: 8.83rem;
+      overflow: hidden;
+      ul{
+        width: 13.33rem;
+        overflow: hidden;
+      }
+      li{
+        float:left;
+        height: 1.07rem;
+        
+        a{
+          font-size:.32rem;
+          padding: 0 .33rem;
+          display: block;
+          line-height:1.07rem;
+          &.active{
+            color:#e52f26;
+            border-bottom:.04rem solid #e12a2b;
+          }
+        }
+      }
+    }
+  }
+  .bargin_content{
+    margin-top: .07rem;
+    background-color: #fff;
+    width:100%;
+    padding: .13rem .07rem;
+    li{
+      width:100%;
+      height: 4rem;
+      padding: .27rem .13rem;
+      background-color: #fff;
+      img{
+        float:left;
+        width: 3.47rem;
+        height: 3.47rem;
+        display: block;
+      }
+      .info_post{
+        // background-color: palegreen;
+        height: 100%;
+        overflow: hidden;
+        padding: .13rem;
+        position: relative;
+        .postage{
+          font-size:.32rem;
+          margin-top: .07rem;
+        }
+        .price{
+          font-size:.43rem;
+          padding-top: .27rem;
+          color:#fc0521;
+          em{
+            font-style:normal;
+            font-size: .27rem;
+          }
+          del{
+            font-size:.32rem;
+            color:#a79f9a;
+          }
+        }
+        .bar{
+          padding-top: .13rem;
+          i{
+            display: inline-block;
+            width: 2.2rem;
+            height: .4rem;
+            line-height: .4rem;
+            border: 1px solid #fb060a;
+            border-radius: .07rem;
+            font-size: .19rem;
+            background-color: #ffb7b7;
+            position: relative;
+            color: #fff;
+            text-align: center;
+            em{
+              display: inline-block;
+              height: 100%;
+              position: absolute;
+              top: 0;
+              left: 0;
+              background-color: #fc353a;
+              border-radius: .07rem;
+              font-style:normal;
+            }
+           
+          }
+          b{
+            font-size:.32rem;
+            color:#fd3c2c;
+            font-weight: 400;
+            padding-left:.13rem;
+          }
+        }
+        .conpon{
+          width: 2.87rem;
+          height: .67rem;
+          position: absolute;
+          display: inline-block;
+          bottom: 0;
+          left: .16rem;
+          line-height: .6rem;
+          text-align: center;
+          border: .04rem dashed #ef898b;
+          font-size: .27rem;
+
+        }
+        .link{
+          width: 1.53rem;
+          height: .60rem;
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          border: .03rem solid #ff4948;
+          background-color: #ff5e5d;
+          border-radius: 5px;
+          font-size: .24rem;
+          text-align: center;
+          line-height: .55rem;
+        }
+      }
+    }
+  }
+}
